@@ -1,0 +1,24 @@
+<p>
+  <button mat-raised-button type="button" color="primary" (click)="openConfirmationModal()">Confirmation modal</button>
+</p>
+<p>
+  <button mat-raised-button type="button" color="primary" (click)="openFormModal()">Component Modal</button>
+</p>
+
+<p>
+  <button mat-raised-button type="button" color="primary" (click)="openTemplateModal()">Template Modal with Component in ng-template</button>
+</p>
+<p>
+  <button mat-raised-button type="button" color="primary" (click)="openSimpleTemplateModal()">Template Modal with simple ng-template</button>
+</p>
+
+<ng-template cdkPortal #modalTemplate="cdkPortal">
+  <app-custom-modal (close)="closeTemplateModal($event)"></app-custom-modal>
+</ng-template>
+
+<ng-template cdkPortal #modalSimpleTemplate="cdkPortal">
+  <div class="my-modal">
+    <p>A simple template based modal</p>
+    <button mat-raised-button type="button" color="primary" (click)="closeTemplateModal($event)">close</button>
+  </div>
+</ng-template>

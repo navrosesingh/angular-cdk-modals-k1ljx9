@@ -1,0 +1,9 @@
+:host {
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0, 0.6);
+  padding: 16px;
+  text-align: center;
+}
